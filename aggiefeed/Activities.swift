@@ -32,6 +32,10 @@ struct Activities {
         let decoder = JSONDecoder()
         
         do {
+            /*
+             * reference: parse JSON as an array
+             * https://stackoverflow.com/questions/48023096/swift-jsondecoder-typemismatch-error
+             */
             let json = try decoder.decode([ActivityJSON].self, from: data)
             print(json.count)
         } catch {
