@@ -13,22 +13,29 @@ struct Activities {
         if let url = URL(string: link) {
             let session = URLSession(configuration: .default)
             
-            let task = session.dataTask(with: url, completionHandler: handleData(data:response:error:))
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                
+                if let safeData = data {
+                    self.parseJSON(data: safeData)
+                }
+            }
             
             task.resume()
         }
     }
     
-    func handleData(data: Data?, response: URLResponse?, error: Error?) {
-        if error != nil {
-            print(error!)
-            return
-        }
+    func parseJSON(data: Data) {
+        let decoder = JSONDecoder()
         
-        if let safeData = data {
-            let dataStr = String(data: safeData, encoding: .utf8)
-            print(dataStr!)
+        do {
+            let json = try decoder.decode([ActivityJSON].self, from: data)
+            print(json.count)
+        } catch {
+            print(error)
         }
     }
 }
-
