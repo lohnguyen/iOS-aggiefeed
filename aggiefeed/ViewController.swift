@@ -9,12 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let activities = Activities()
+        
+        activities.fetchData(link: "https://aggiefeed.ucdavis.edu/api/v1/activity/public?s=0?l=25")
     }
-
-
 }
+
+
 
