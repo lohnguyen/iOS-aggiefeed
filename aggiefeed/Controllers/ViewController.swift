@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath)
         cell.textLabel!.text = activities[indexPath.row].title
-        
+        cell.textLabel!.font = UIFont(name:"Baskerville", size:15)
         return cell
     }
     

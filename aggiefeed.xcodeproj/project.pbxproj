@@ -39,28 +39,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		250375FD24C0D516009A847C /* Model */ = {
+		250375FD24C0D516009A847C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				25507C4124BFC5C400997F31 /* Activity.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		250375FE24C0D521009A847C /* View */ = {
+		250375FE24C0D521009A847C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				25D8B0EA24BE6CA300B170F8 /* LaunchScreen.storyboard */,
 				25D8B0E524BE6CA200B170F8 /* Main.storyboard */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		250375FF24C0D528009A847C /* Controller */ = {
+		250375FF24C0D528009A847C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				25D8B0E324BE6CA200B170F8 /* ViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		25D8B0D324BE6CA100B170F8 = {
@@ -84,11 +85,10 @@
 			children = (
 				25D8B0DF24BE6CA200B170F8 /* AppDelegate.swift */,
 				25D8B0E124BE6CA200B170F8 /* SceneDelegate.swift */,
-				250375FD24C0D516009A847C /* Model */,
-				250375FE24C0D521009A847C /* View */,
-				250375FF24C0D528009A847C /* Controller */,
+				250375FD24C0D516009A847C /* Models */,
+				250375FE24C0D521009A847C /* Views */,
+				250375FF24C0D528009A847C /* Controllers */,
 				25D8B0E824BE6CA300B170F8 /* Assets.xcassets */,
-				25D8B0EA24BE6CA300B170F8 /* LaunchScreen.storyboard */,
 				25D8B0ED24BE6CA300B170F8 /* Info.plist */,
 			);
 			path = aggiefeed;
