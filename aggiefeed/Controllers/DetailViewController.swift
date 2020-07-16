@@ -11,12 +11,20 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var activity: Activity!
-
+        
+    @IBOutlet weak var activityTitle: UILabel!
+    @IBOutlet weak var actorDisplayName: UILabel!
+    @IBOutlet weak var objectType: UILabel!
+    @IBOutlet weak var PublishedDate: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if (activity != nil) {
-            print(activity!.title)
+            activityTitle.text = activity.title
+            actorDisplayName.text = activity.actor.displayName
+            objectType.text = activity.object.objectType
+            PublishedDate.text = activity.published
         }
     }
 
