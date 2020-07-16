@@ -20,14 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         activityTable.dataSource = self
         activityTable.delegate = self
         
-        process(link: "https://aggiefeed.ucdavis.edu/api/v1/activity/public?s=0?l=25")
-        
-    }
-        
-    func displayData() {
-        DispatchQueue.main.async {
-            self.activityTable.reloadData()
-        }
+        fetchData(link: "https://aggiefeed.ucdavis.edu/api/v1/activity/public?s=0?l=25")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,9 +37,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
-
     
-    func process(link: String) {
+    func fetchData(link: String) {
         if let url = URL(string: link) {
             let session = URLSession(configuration: .default)
             
@@ -57,8 +49,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
                 
                 if let safeData = data {
-                    self.activities = self.parseJSON(data: safeData)
-                    self.displayData()
+                    self.activities = self.parseJSON(safeData)
+                    DispatchQueue.main.async { // reload cells after data is loaded
+                        self.activityTable.reloadData()
+                    }
                 }
             }
             
@@ -66,7 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func parseJSON(data: Data) -> [Activity] {
+    func parseJSON(_ data: Data) -> [Activity] {
         let decoder = JSONDecoder()
         
         do {

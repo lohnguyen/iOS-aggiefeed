@@ -39,6 +39,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		250375FD24C0D516009A847C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25507C4124BFC5C400997F31 /* Activity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		250375FE24C0D521009A847C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25D8B0E524BE6CA200B170F8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250375FF24C0D528009A847C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				25D8B0E324BE6CA200B170F8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		25D8B0D324BE6CA100B170F8 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +84,12 @@
 			children = (
 				25D8B0DF24BE6CA200B170F8 /* AppDelegate.swift */,
 				25D8B0E124BE6CA200B170F8 /* SceneDelegate.swift */,
-				25D8B0E324BE6CA200B170F8 /* ViewController.swift */,
-				25D8B0E524BE6CA200B170F8 /* Main.storyboard */,
+				250375FD24C0D516009A847C /* Model */,
+				250375FE24C0D521009A847C /* View */,
+				250375FF24C0D528009A847C /* Controller */,
 				25D8B0E824BE6CA300B170F8 /* Assets.xcassets */,
 				25D8B0EA24BE6CA300B170F8 /* LaunchScreen.storyboard */,
 				25D8B0ED24BE6CA300B170F8 /* Info.plist */,
-				25507C4124BFC5C400997F31 /* Activity.swift */,
 			);
 			path = aggiefeed;
 			sourceTree = "<group>";

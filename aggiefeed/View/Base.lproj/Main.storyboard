@@ -34,6 +34,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tSI-iT-N9H" kind="show" id="ba5-an-HEJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -47,7 +50,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="126.35467980295567"/>
+            <point key="canvasLocation" x="114" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rcr-ml-TUN">
+            <objects>
+                <viewController id="tSI-iT-N9H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eqx-fu-phd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uNT-eQ-Gfm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zqT-Xh-NCy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZsC-cl-Ry6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="126"/>
         </scene>
     </scenes>
 </document>
