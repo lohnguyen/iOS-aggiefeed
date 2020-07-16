@@ -15,9 +15,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(activity!.title)
-
-        // Do any additional setup after loading the view.
+        if (activity != nil) {
+            print(activity!.title)
+        }
     }
 
 }
