@@ -19,7 +19,7 @@ class GeneralViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         activityTable.dataSource = self
         activityTable.delegate = self
-        
+                
         fetchData(link: "https://aggiefeed.ucdavis.edu/api/v1/activity/public?s=0?l=25")
     }
     
@@ -32,19 +32,20 @@ class GeneralViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as! ActivityCell
+        
         cell.textLabel!.text = activities[indexPath.row].title
         cell.detailTextLabel!.text = activities[indexPath.row].actor.displayName
+        cell.rowNum = indexPath.row
 
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
-//            let cell = sender as! UITableViewCell
-            print("hellow")
+            let cell = sender as! ActivityCell
             let destVC = segue.destination as! DetailViewController
-            destVC.activity = activities[0]
+            destVC.activity = activities[cell.rowNum]
         }
     }
     
