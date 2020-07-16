@@ -16,7 +16,7 @@ struct Actor : Decodable {
     let displayName: String?
 }
 
-struct ActivityJSON : Decodable {
+struct Activity : Decodable {
     let title: String
     let actor: Actor
     let object: Object
