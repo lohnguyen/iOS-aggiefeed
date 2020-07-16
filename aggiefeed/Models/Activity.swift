@@ -1,5 +1,5 @@
 //
-//  ActivitiesJSON.swift
+//  Activity.swift
 //  aggiefeed
 //
 //  Created by Long H. Nguyen on 7/15/20.

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GeneralViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var activityTable: UITableView!
     
@@ -36,6 +36,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel!.text = activities[indexPath.row].title
         cell.textLabel!.font = UIFont(name:"Baskerville", size:15)
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+//            let cell = sender as! UITableViewCell
+            print("hellow")
+            let destVC = segue.destination as! DetailViewController
+            destVC.activity = activities[0]
+        }
     }
     
     func fetchData(link: String) {
