@@ -7,3 +7,47 @@
 //
 
 import Foundation
+
+protocol ActivityManagerDelegate {
+    func didFetchActivities(_ activityManager: ActivityManager, activities: [Activity])
+    func didFailWithError(_ error: Error)
+}
+
+struct ActivityManager {
+    var delegate: ActivityManagerDelegate?
+    let link = "https://aggiefeed.ucdavis.edu/api/v1/activity/public?s=0?l=25"
+    
+    func fetchData() {
+        if let url = URL(string: link) {
+            let session = URLSession(configuration: .default)
+            
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    self.delegate?.didFailWithError(error!)
+                    return
+                }
+                
+                if let safeData = data {
+                    self.delegate?.didFetchActivities(self, activities: self.parseJSON(safeData))
+                }
+            }
+            
+            task.resume()
+        }
+    }
+    
+    func parseJSON(_ data: Data) -> [Activity] {
+        let decoder = JSONDecoder()
+        
+        do {
+            /*
+             * reference: parse JSON as an array
+             * https://stackoverflow.com/questions/48023096/swift-jsondecoder-typemismatch-error
+             */
+            return try decoder.decode([Activity].self, from: data)
+        } catch {
+            self.delegate?.didFailWithError(error)
+            return []
+        }
+    }
+}
