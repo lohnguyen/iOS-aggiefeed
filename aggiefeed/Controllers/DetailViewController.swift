@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var activityTitle: UILabel!
     @IBOutlet weak var actorDisplayName: UILabel!
     @IBOutlet weak var objectType: UILabel!
-    @IBOutlet weak var PublishedDate: UILabel!
+    @IBOutlet weak var publishedDate: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
             activityTitle.text = activity.title
             actorDisplayName.text = activity.actor.displayName
             objectType.text = activity.object.objectType
-            PublishedDate.text = activity.published
+            publishedDate.text = activity.published
         }
     }
 

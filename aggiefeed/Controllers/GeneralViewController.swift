@@ -18,7 +18,6 @@ class GeneralViewController: UIViewController {
         super.viewDidLoad()
         
         activityTable.dataSource = self
-        activityTable.delegate = self
         activityManager.delegate = self
         
         activityManager.fetchData()
@@ -33,11 +32,7 @@ class GeneralViewController: UIViewController {
     }
 }
 
-extension GeneralViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-            
+extension GeneralViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return activities.count
     }
@@ -45,8 +40,8 @@ extension GeneralViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as! ActivityCell
         
-        cell.textLabel!.text = activities[indexPath.row].title
-        cell.detailTextLabel!.text = activities[indexPath.row].actor.displayName
+        cell.textLabel?.text = activities[indexPath.row].title
+        cell.detailTextLabel?.text = activities[indexPath.row].actor.displayName
         cell.rowNum = indexPath.row
         
         return cell
