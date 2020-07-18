@@ -17,6 +17,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var objectType: UILabel!
     @IBOutlet weak var publishedDate: UILabel!
     
+    @IBAction func pressBackButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

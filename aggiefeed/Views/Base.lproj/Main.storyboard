@@ -83,19 +83,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActorName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cr-aa-xgu">
-                                <rect key="frame" x="15" y="123.66666666666669" width="345" height="21"/>
+                                <rect key="frame" x="15" y="73.666666666666671" width="345" height="21"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fv-Cn-ImF">
-                                <rect key="frame" x="15" y="194.66666666666666" width="37" height="18.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ObjectType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fv-Cn-ImF">
+                                <rect key="frame" x="15" y="144.66666666666666" width="73" height="19"/>
                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PublishedDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgk-9e-P9z">
-                                <rect key="frame" x="265.66666666666669" y="194.66666666666666" width="94.333333333333314" height="18.666666666666657"/>
+                                <rect key="frame" x="265.66666666666669" y="144.66666666666666" width="94.333333333333314" height="18.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -106,10 +106,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-l0-3M8">
+                                <rect key="frame" x="168.66666666666666" y="686" width="38" height="33"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="pressBackButton:" destination="tSI-iT-N9H" eventType="touchUpInside" id="tj8-Ep-hF6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="XDs-Sh-9UR" firstAttribute="trailing" secondItem="uNT-eQ-Gfm" secondAttribute="trailing" constant="-15" id="5aG-04-mhQ"/>
+                            <constraint firstItem="kbV-l0-3M8" firstAttribute="centerX" secondItem="eqx-fu-phd" secondAttribute="centerX" id="EzA-kW-IeX"/>
                             <constraint firstItem="Dgk-9e-P9z" firstAttribute="trailing" secondItem="uNT-eQ-Gfm" secondAttribute="trailing" constant="-15" id="NZA-rY-OMi"/>
                             <constraint firstItem="XDs-Sh-9UR" firstAttribute="leading" secondItem="uNT-eQ-Gfm" secondAttribute="leading" constant="15" id="Osh-M6-UWo"/>
                             <constraint firstItem="XDs-Sh-9UR" firstAttribute="top" secondItem="uNT-eQ-Gfm" secondAttribute="top" constant="15" id="QND-TP-u1A"/>
@@ -117,8 +126,9 @@
                             <constraint firstItem="3fv-Cn-ImF" firstAttribute="leading" secondItem="uNT-eQ-Gfm" secondAttribute="leading" constant="15" id="doK-9W-KdO"/>
                             <constraint firstItem="3fv-Cn-ImF" firstAttribute="top" secondItem="3cr-aa-xgu" secondAttribute="bottom" constant="50" id="gB6-9N-Whf"/>
                             <constraint firstItem="Dgk-9e-P9z" firstAttribute="top" secondItem="3cr-aa-xgu" secondAttribute="bottom" constant="50" id="kld-NT-KUh"/>
+                            <constraint firstItem="kbV-l0-3M8" firstAttribute="bottom" secondItem="uNT-eQ-Gfm" secondAttribute="bottom" constant="-5" id="pvd-fl-5uF"/>
                             <constraint firstItem="3cr-aa-xgu" firstAttribute="trailing" secondItem="uNT-eQ-Gfm" secondAttribute="trailing" constant="-15" id="saa-bh-Yrp"/>
-                            <constraint firstItem="3cr-aa-xgu" firstAttribute="top" secondItem="XDs-Sh-9UR" secondAttribute="bottom" constant="80" id="zB7-3Z-gGx"/>
+                            <constraint firstItem="3cr-aa-xgu" firstAttribute="top" secondItem="XDs-Sh-9UR" secondAttribute="bottom" constant="30" id="zB7-3Z-gGx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uNT-eQ-Gfm"/>
                     </view>
