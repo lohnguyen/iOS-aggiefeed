@@ -24,7 +24,7 @@
 		2503760424C10389009A847C /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		2503EF3624C2090700618154 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		25507C4124BFC5C400997F31 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		25D8B0DC24BE6CA200B170F8 /* aggiefeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aggiefeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25D8B0DC24BE6CA200B170F8 /* AggieFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AggieFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D8B0DF24BE6CA200B170F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25D8B0E124BE6CA200B170F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		25D8B0E324BE6CA200B170F8 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		25D8B0DD24BE6CA200B170F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25D8B0DC24BE6CA200B170F8 /* aggiefeed.app */,
+				25D8B0DC24BE6CA200B170F8 /* AggieFeed.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 			);
 			name = aggiefeed;
 			productName = aggiefeed;
-			productReference = 25D8B0DC24BE6CA200B170F8 /* aggiefeed.app */;
+			productReference = 25D8B0DC24BE6CA200B170F8 /* AggieFeed.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -333,7 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lohnguyen.aggiefeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AggieFeed;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,7 +352,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lohnguyen.aggiefeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AggieFeed;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
