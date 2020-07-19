@@ -12,6 +12,15 @@ protocol ActivityManagerDelegate {
     func didFetchActivities(_ activityManager: ActivityManager, activities: [Activity])
     func didFailWithError(_ error: Error)
 }
+//
+//extension String {
+//    var htmlDecoded : String? {
+//        guard let encodedString = self.data(using: .utf8) else { return nil }
+//        let options : [String:Any] = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+//                                                NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue]
+//        return  try? NSAttributedString(data: encodedString, options: options, documentAttributes: nil).string
+//    }
+//}
 
 struct ActivityManager {
     var delegate: ActivityManagerDelegate?
@@ -27,13 +36,20 @@ struct ActivityManager {
                     return
                 }
                 
-                if let safeData = data {
+                if var safeData = data {
+                    safeData = self.parseApostrophe(safeData)
                     self.delegate?.didFetchActivities(self, activities: self.parseJSON(safeData))
+
                 }
             }
             
             task.resume()
         }
+    }
+    
+    func parseApostrophe(_ raw: Data) -> Data {
+        let dataStr = String(data: raw, encoding: .utf8)?.replacingOccurrences(of: "&#8217;", with: "'")
+        return dataStr!.data(using: .utf8)!
     }
     
     func parseJSON(_ data: Data) -> [Activity] {
