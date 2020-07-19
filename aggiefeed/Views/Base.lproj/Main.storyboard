@@ -54,6 +54,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQd-h6-sUn" userLabel="Reload">
+                                <rect key="frame" x="337" y="53.666666666666629" width="22" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" red="0.81032603979999995" green="0.63167697190000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="arrow.clockwise" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="reloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZtL-h9-hyg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.21862572429999999" blue="0.38972312209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -63,6 +74,8 @@
                             <constraint firstItem="7U5-Kk-Naq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jIz-Jv-GmP"/>
                             <constraint firstItem="XaQ-HK-PqX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="l1a-oC-dPT"/>
                             <constraint firstItem="XaQ-HK-PqX" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="pdG-RZ-TYI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QQd-h6-sUn" secondAttribute="trailing" constant="16" id="s6u-NF-PSv"/>
+                            <constraint firstItem="QQd-h6-sUn" firstAttribute="centerY" secondItem="7U5-Kk-Naq" secondAttribute="centerY" id="wpZ-M3-17S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -145,4 +158,7 @@
             <point key="canvasLocation" x="773.60000000000002" y="125.61576354679804"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+    </resources>
 </document>

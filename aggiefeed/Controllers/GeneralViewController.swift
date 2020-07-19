@@ -30,6 +30,11 @@ class GeneralViewController: UIViewController {
             destVC.activity = activities[cell.rowNum]
         }
     }
+    
+    
+    @IBAction func reloadButton(_ sender: UIButton) {
+        activityManager.fetchData()
+    }
 }
 
 extension GeneralViewController: UITableViewDataSource {
