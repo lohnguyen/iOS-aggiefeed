@@ -12,15 +12,6 @@ protocol ActivityManagerDelegate {
     func didFetchActivities(_ activityManager: ActivityManager, activities: [Activity])
     func didFailWithError(_ error: Error)
 }
-//
-//extension String {
-//    var htmlDecoded : String? {
-//        guard let encodedString = self.data(using: .utf8) else { return nil }
-//        let options : [String:Any] = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-//                                                NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue]
-//        return  try? NSAttributedString(data: encodedString, options: options, documentAttributes: nil).string
-//    }
-//}
 
 struct ActivityManager {
     var delegate: ActivityManagerDelegate?
