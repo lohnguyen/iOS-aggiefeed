@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var actorDisplayName: UILabel!
     @IBOutlet weak var objectType: UILabel!
     @IBOutlet weak var publishedDate: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     @IBAction func pressBackButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -23,6 +24,9 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backButton.layer.cornerRadius = 8
+        backButton.layer.borderWidth = 1
         
         if (activity != nil) {
             activityTitle.text = activity.title

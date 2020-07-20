@@ -55,7 +55,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQd-h6-sUn" userLabel="Reload">
-                                <rect key="frame" x="337" y="53.666666666666629" width="22" height="26"/>
+                                <rect key="frame" x="337" y="53.666666666666657" width="22" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="tintColor" red="0.81032603979999995" green="0.63167697190000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="arrow.clockwise" catalog="system">
@@ -120,9 +120,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbV-l0-3M8">
-                                <rect key="frame" x="168.66666666666666" y="686" width="38" height="33"/>
+                                <rect key="frame" x="137.66666666666666" y="676" width="100" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.21862572429999999" blue="0.40318095599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="m0G-bg-GHP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.81032603979999995" green="0.63167697190000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="pressBackButton:" destination="tSI-iT-N9H" eventType="touchUpInside" id="tj8-Ep-hF6"/>
                                 </connections>
@@ -139,7 +145,7 @@
                             <constraint firstItem="3fv-Cn-ImF" firstAttribute="leading" secondItem="uNT-eQ-Gfm" secondAttribute="leading" constant="15" id="doK-9W-KdO"/>
                             <constraint firstItem="3fv-Cn-ImF" firstAttribute="top" secondItem="3cr-aa-xgu" secondAttribute="bottom" constant="50" id="gB6-9N-Whf"/>
                             <constraint firstItem="Dgk-9e-P9z" firstAttribute="top" secondItem="3cr-aa-xgu" secondAttribute="bottom" constant="50" id="kld-NT-KUh"/>
-                            <constraint firstItem="kbV-l0-3M8" firstAttribute="bottom" secondItem="uNT-eQ-Gfm" secondAttribute="bottom" constant="-5" id="pvd-fl-5uF"/>
+                            <constraint firstItem="kbV-l0-3M8" firstAttribute="bottom" secondItem="uNT-eQ-Gfm" secondAttribute="bottom" constant="-15" id="pvd-fl-5uF"/>
                             <constraint firstItem="3cr-aa-xgu" firstAttribute="trailing" secondItem="uNT-eQ-Gfm" secondAttribute="trailing" constant="-15" id="saa-bh-Yrp"/>
                             <constraint firstItem="3cr-aa-xgu" firstAttribute="top" secondItem="XDs-Sh-9UR" secondAttribute="bottom" constant="30" id="zB7-3Z-gGx"/>
                         </constraints>
@@ -149,6 +155,7 @@
                     <connections>
                         <outlet property="activityTitle" destination="XDs-Sh-9UR" id="dYa-xg-0F5"/>
                         <outlet property="actorDisplayName" destination="3cr-aa-xgu" id="v52-MG-QJ0"/>
+                        <outlet property="backButton" destination="kbV-l0-3M8" id="POc-NM-FbT"/>
                         <outlet property="objectType" destination="3fv-Cn-ImF" id="qex-3q-VrK"/>
                         <outlet property="publishedDate" destination="Dgk-9e-P9z" id="cuy-bc-Yz1"/>
                     </connections>
