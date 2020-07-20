@@ -49,6 +49,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="cellColor"/>
                                         <connections>
                                             <segue destination="tSI-iT-N9H" kind="presentation" identifier="showDetails" id="ba5-an-HEJ"/>
                                         </connections>
@@ -58,9 +59,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQd-h6-sUn" userLabel="Reload">
                                 <rect key="frame" x="337" y="53.666666666666657" width="22" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" red="0.0" green="0.21862572429999999" blue="0.40318095599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" name="textColor"/>
                                 <state key="normal" image="arrow.clockwise" catalog="system">
-                                    <color key="titleColor" red="0.0" green="0.21862572429999999" blue="0.40318095599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="textColor"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
                                 </state>
                                 <connections>
@@ -170,10 +171,13 @@
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <namedColor name="backgroundColor">
-            <color red="0.98255997900000003" green="0.97906917329999998" blue="0.99302679299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98299998044967651" green="0.97899997234344482" blue="0.99299997091293335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cellColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textColor">
-            <color red="0.0" green="0.21862572429999999" blue="0.38972312209999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.21899999678134918" blue="0.38999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
