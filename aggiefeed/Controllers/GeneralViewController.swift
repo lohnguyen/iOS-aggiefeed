@@ -24,7 +24,7 @@ class GeneralViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails" {
+        if segue.identifier == K.detailSegue {
             let cell = sender as! ActivityCell
             let destVC = segue.destination as! DetailViewController
             destVC.activity = activities[cell.rowNum]
@@ -43,7 +43,7 @@ extension GeneralViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as! ActivityCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! ActivityCell
         
         cell.textLabel?.text = activities[indexPath.row].title
         cell.detailTextLabel?.text = activities[indexPath.row].actor.displayName

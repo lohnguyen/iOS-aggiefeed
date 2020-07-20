@@ -15,10 +15,9 @@ protocol ActivityManagerDelegate {
 
 struct ActivityManager {
     var delegate: ActivityManagerDelegate?
-    let link = "https://aggiefeed.ucdavis.edu/api/v1/activity/public?s=0?l=25"
     
     func fetchData() {
-        if let url = URL(string: link) {
+        if let url = URL(string: K.link) {
             let session = URLSession(configuration: .default)
             
             let task = session.dataTask(with: url) { (data, response, error) in
