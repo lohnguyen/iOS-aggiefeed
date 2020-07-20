@@ -25,8 +25,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backButton.layer.cornerRadius = 8
-        backButton.layer.borderWidth = 1
+        backButton.layer.cornerRadius = 8        
         
         if (activity != nil) {
             activityTitle.text = activity.title
