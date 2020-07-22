@@ -27,9 +27,8 @@ struct ActivityManager {
                 }
                 
                 if var safeData = data {
-                    safeData = self.parseApostrophe(safeData)
+                    safeData = self.parseHTMLEncoding(safeData)
                     self.delegate?.didFetchActivities(self, activities: self.parseJSON(safeData))
-
                 }
             }
             
@@ -37,9 +36,10 @@ struct ActivityManager {
         }
     }
     
-    func parseApostrophe(_ raw: Data) -> Data {
-        let dataStr = String(data: raw, encoding: .utf8)?.replacingOccurrences(of: "&#8217;", with: "'")
-        return dataStr!.data(using: .utf8)!
+    func parseHTMLEncoding(_ raw: Data) -> Data {
+        var dataStr = String(data: raw, encoding: .utf8)!
+        dataStr = String(htmlEncoding: dataStr)!
+        return dataStr.data(using: .utf8)!
     }
     
     func parseJSON(_ data: Data) -> [Activity] {
@@ -57,3 +57,24 @@ struct ActivityManager {
         }
     }
 }
+
+
+/*
+* reference: parse HTML encoding characters
+* https://stackoverflow.com/questions/25607247/how-do-i-decode-html-entities-in-swift
+*/
+extension String {
+    init?(htmlEncoding: String) {
+        guard let data = htmlEncoding.data(using: .utf8) else { return nil }
+        
+        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8.rawValue
+        ]
+
+        guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else { return nil }
+
+        self.init(attributedString.string)
+    }
+}
+
