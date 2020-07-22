@@ -27,6 +27,8 @@ class GeneralViewController: UIViewController {
         if segue.identifier == K.detailSegue {
             let cell = sender as! ActivityCell
             let destVC = segue.destination as! DetailViewController
+            let indexPath = IndexPath(row: cell.rowNum, section: 0)
+            activityTable.deselectRow(at: indexPath, animated: true)
             destVC.activity = activities[cell.rowNum]
         }
     }
