@@ -78,7 +78,7 @@
 		25D8B0D324BE6CA100B170F8 = {
 			isa = PBXGroup;
 			children = (
-				25D8B0DE24BE6CA200B170F8 /* aggiefeed */,
+				25D8B0DE24BE6CA200B170F8 /* AggieFeed */,
 				25D8B0DD24BE6CA200B170F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +91,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		25D8B0DE24BE6CA200B170F8 /* aggiefeed */ = {
+		25D8B0DE24BE6CA200B170F8 /* AggieFeed */ = {
 			isa = PBXGroup;
 			children = (
 				25D8B0DF24BE6CA200B170F8 /* AppDelegate.swift */,
@@ -103,15 +103,15 @@
 				25D8B0E824BE6CA300B170F8 /* Assets.xcassets */,
 				25D8B0ED24BE6CA300B170F8 /* Info.plist */,
 			);
-			path = aggiefeed;
+			path = AggieFeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		25D8B0DB24BE6CA100B170F8 /* aggiefeed */ = {
+		25D8B0DB24BE6CA100B170F8 /* AggieFeed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25D8B0F024BE6CA300B170F8 /* Build configuration list for PBXNativeTarget "aggiefeed" */;
+			buildConfigurationList = 25D8B0F024BE6CA300B170F8 /* Build configuration list for PBXNativeTarget "AggieFeed" */;
 			buildPhases = (
 				25D8B0D824BE6CA100B170F8 /* Sources */,
 				25D8B0D924BE6CA100B170F8 /* Frameworks */,
@@ -121,7 +121,7 @@
 			);
 			dependencies = (
 			);
-			name = aggiefeed;
+			name = AggieFeed;
 			productName = aggiefeed;
 			productReference = 25D8B0DC24BE6CA200B170F8 /* AggieFeed.app */;
 			productType = "com.apple.product-type.application";
@@ -141,7 +141,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 25D8B0D724BE6CA100B170F8 /* Build configuration list for PBXProject "aggiefeed" */;
+			buildConfigurationList = 25D8B0D724BE6CA100B170F8 /* Build configuration list for PBXProject "AggieFeed" */;
 			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -154,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				25D8B0DB24BE6CA100B170F8 /* aggiefeed */,
+				25D8B0DB24BE6CA100B170F8 /* AggieFeed */,
 			);
 		};
 /* End PBXProject section */
@@ -365,7 +365,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		25D8B0D724BE6CA100B170F8 /* Build configuration list for PBXProject "aggiefeed" */ = {
+		25D8B0D724BE6CA100B170F8 /* Build configuration list for PBXProject "AggieFeed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25D8B0EE24BE6CA300B170F8 /* Debug */,
@@ -374,7 +374,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25D8B0F024BE6CA300B170F8 /* Build configuration list for PBXNativeTarget "aggiefeed" */ = {
+		25D8B0F024BE6CA300B170F8 /* Build configuration list for PBXNativeTarget "AggieFeed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25D8B0F124BE6CA300B170F8 /* Debug */,
